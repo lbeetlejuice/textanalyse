@@ -1,0 +1,282 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+/* CSS-RESET -----------------------------------------------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* GENERAL -------------------------------------------------------------------*/
+
+body {
+	font-family: Arial, sans-serif;
+	font-size: 1em;
+}
+
+a, img, a:link, a:visited, a:active	{
+	text-decoration: none;
+	border: 0px none;
+}
+
+a:hover 	{
+	color: black;
+}
+
+.header, .main {
+  position: absolute;
+  width: 900px;
+  margin-left: 50%;
+  left: -450px;
+}
+
+.header {
+  height: 100px;
+  /*border: 1px solid red;*/
+	background-image: url("../img/logo.png");
+	background-size: 400px;
+	background-repeat: no-repeat;
+	background-position: center left;
+}
+
+.main {
+  top: 159px;
+	min-height: 1000px;
+	margin-bottom: 50px;
+  /*border: 1px solid orange;*/
+	background-color: white;
+	-webkit-box-shadow: 7px 6px 15px 1px rgba(0,0,0,1);
+	-moz-box-shadow: 7px 6px 15px 1px rgba(0,0,0,1);
+	box-shadow: 7px 6px 15px 1px rgba(0,0,0,1);
+}
+
+.content, h1, h2, h3, h4, h5, h6 {
+	font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+	font-size: 2em;
+	font-weight: bold;
+	line-height: 2;
+}
+
+h2 {
+	font-size: 1.5em;
+	line-height: 2;
+}
+
+.content {
+	padding: 50px;
+	line-height: 1.5;
+}
+
+.linie {
+	border :none;
+	border-top: 1px solid #0090E0;
+	background-color:#FFFFFF;
+	height: 1px;
+	margin: 0px 80px 0px 80px;
+}
+
+/* NAVIGATION ----------------------------------------------------------------*/
+
+.navigation {
+  top: 110px;
+  height: 100px;
+	position: absolute;
+	width: 900px;
+	margin-left: 50%;
+	left: -450px;
+  /*border: 1px solid green;*/
+}
+
+.navpoints {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  padding: 15px 4px 17px 0;
+  list-style: none;
+	-webkit-box-shadow: 7px 6px 15px 1px rgba(0,0,0,1);
+	-moz-box-shadow: 7px 6px 15px 1px rgba(0,0,0,1);
+	box-shadow: 7px 6px 15px 1px rgba(0,0,0,1);
+}
+
+.navpoints li a {
+	color: black;
+}
+
+.navpoints li a:hover {
+	color: white;
+}
+
+.navpoints li {
+  font: bold 12px/18px sans-serif;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 15px 40px;
+  background: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.navpoints li:hover {
+  background: #555;
+  color: #fff;
+}
+
+.navpoints li ul {
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 150px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+
+.navpoints li:hover ul {
+  display: block;
+}
+
+/* INDEX.HTML ----------------------------------------------------------------*/
+
+.searchbar {
+	width: 775px;
+	font-family: sans-serif;
+	font-size: 18px;
+	margin: 0;
+	appearance: none;
+  box-shadow: none;
+  border-radius: none;
+	padding: 10px;
+  border: solid 1px black;
+}
+
+.options ul li {
+	float: left;
+	list-style: none;
+	margin: 0px 40px 0px 0px;
+}
+
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border:none;
+  border-radius: 0;
+  font-size: 1em;
+  width: 100%
+}
+
+input[type='checkbox']:checked,
+input[type='checkbox']:not(:checked) {
+  background: transparent;
+  position: relative;
+  visibility: hidden;
+  margin:0;
+  padding:0;
+}
+
+input[type='checkbox'] + label {
+  cursor: pointer;
+}
+
+input[type='checkbox']:checked + label::before,
+input[type='checkbox']:not(:checked) + label::before {
+  content:' ';
+  display:inline-block;
+  width: 17px;
+  height:17px;
+  position: relative;
+  top:4px;
+  border: 1px solid black;
+  background: white;
+  margin-right: 1em;
+  box-shadow: inset 0 1px 1px 0 rgba(0,0,0,.1);
+}
+
+input[type='checkbox']:hover  + label::before {
+  background:#ddd;
+  box-shadow: inset 0 0 0 2px white;
+}
+
+input[type='checkbox']:checked  + label::before {
+  background:black;
+  box-shadow: inset 0 0 0 2px white;
+}
+
+.button {
+	background-color:white;
+	border:1px solid black;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-size:18px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	margin: 20px 0px;
+}
+
+.button:hover {
+	background-color:#F2F2F2;
+}
+
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+table tr td {
+	padding: 5px 10px;
+}
+
+table {
+	width: 100%;
+	margin-top: 40px;
+	border-collapse: collapse;
+}
+
+table .user {
+	width: 20%;
+}
+
+table .user, table .title {
+	border-top: 1px solid #E3E3E3;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+table .tablecontent {
+	border-bottom: 1px solid #E3E3E3;
+}
